@@ -1,14 +1,9 @@
 #include<stdio.h>
 #include<math.h>
-float returnwithoutPrompt(float w){
-    scanf("%f",&w);
-    return w;
-}
-int main() 
+int main()
 {
-    float w = returnwithoutPrompt(w);
-    float y,x,h,BMI;
-    scanf("%f",&x);
+    double BMI,w,h,x,y;
+    scanf("%lf %lf",&w,&x);
     y=x/100;
     h = pow(y,2);
     BMI=w/h;
