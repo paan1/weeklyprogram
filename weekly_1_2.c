@@ -13,7 +13,11 @@ int main()
     h = pow(y,2);
     BMI=w/h;
     printf("BMI score is :%.2lf\n",BMI);
-    if(BMI < 18.5)
+    if(BMI < 0)
+    {
+        printf("Error");
+    }
+    else if(BMI < 18.5)
     {
         printf("underweight");
     }
@@ -28,6 +32,10 @@ int main()
     else if(BMI >= 30.0 && BMI <= 50.0 )
     {
         printf("too fat");
+    }
+    else if(BMI < 0)
+    {
+        printf("Error");
     }
     else
     {
