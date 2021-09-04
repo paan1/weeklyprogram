@@ -1,7 +1,7 @@
 #include<stdio.h>
 long int main()
 {
-    int  num1,num2,num3,x,y,z;
+    long int  num1,num2,num3,x,y,z;
      scanf("%ld %ld %ld",&num1,&num2,&num3);
     x=num1+num2;
     y=num1+num3;
