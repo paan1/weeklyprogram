@@ -1,22 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int  num1,num2,num3,x,y,z;
-     scanf("%d %d %d",&num1,&num2,&num3);
-    x=num1+num2;
-    y=num1+num3;
-	  z=num2+num3;
-      if (x >= y && x >= z) 
+    int  x,y,z,sum;
+     scanf("%d %d %d",&x,&y,&z);
+      if (z <= x && z <= y) 
       {
-        printf("%d + %d = %d",num1,num2,x);
+       z=0;
+       printf("%d + %d = ",x,y);
       } 
-      else if (y >= x && y >= z) 
+      else if (y <= z && y <= x) 
       {
-        printf("%d + %d = %d",num1,num3,y);
+        y=0;
       } 
-      else if (z >= y && z >= x)
+      else if (x <= y && x <= z)
       { 
-        printf("%d + %d = %d",num2,num3,z);
+        x=0;
       }
+      sum = x+y+z;
+      printf("%d",sum);
     return 0;
 }
