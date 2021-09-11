@@ -1,46 +1,28 @@
 #include<stdio.h>
-#include<math.h>
-float returnwithoutPrompt(float w){
-    scanf("%f",&w);
-    return w;
-}
-int main() 
+int main()
 {
-    float w = returnwithoutPrompt(w);
-    float y,x,h,BMI;
-    scanf("%f",&x);
-    y=x/100;
-    h = pow(y,2);
-    BMI=w/h;
-    printf("BMI score is :%.2lf\n",BMI);
-    if(BMI < 0)
+    int n;
+    printf("Enter number:");
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++)
     {
-        printf("Error");
+        printf("*");
     }
-    else if(BMI < 18.5)
+    printf("\n");
+    for (int down = 1; down <= (n-2); down++)
     {
-        printf("underweight");
-    }
-    else if(BMI >= 18.5 && BMI <= 24.99 )
+    printf("*");
+    for (int space = 1; space <= (n-2); space++)
     {
-        printf("normal");
+        printf(" ");
     }
-    else if(BMI >= 25.0 && BMI <= 29.99 )
+    printf("*");
+    printf("\n");
+    }
+    for(int i=1; i <= n; i++)
     {
-        printf("overweight");
+        printf("*");
     }
-    else if(BMI >= 30.0 && BMI <= 50.0 )
-    {
-        printf("too fat");
-    }
-    else if(BMI < 0)
-    {
-        printf("Error");
-    }
-    else
-    {
-        printf("Error");
-    }
-    
     return 0;
+    
 }
