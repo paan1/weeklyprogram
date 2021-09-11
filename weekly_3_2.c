@@ -1,20 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,k;
-    printf("enter number:");
-    scanf("%d", &n);
-    for(i=1;i<=n;i++)
+    int n;
+    printf("Enter number:");
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++)
     {
-       for(j=1;j<= n-i;j++)
-       {
-       printf(" ");
-       }
-       for(k=1;k<=((2*i)-1);k++)
-       {
         printf("*");
-       }
-       printf("\n");
+    }
+    printf("\n");
+    for (int down = 1; down <= (n-2); down++)
+    {
+    printf("*");
+    for (int space = 1; space <= (n-2); space++)
+    {
+        printf(" ");
+    }
+    printf("*");
+    printf("\n");
+    }
+    for(int i=1; i <= n; i++)
+    {
+        printf("*");
     }
     return 0;
+    
 }

@@ -1,24 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    long int  x,y,z,sum;
-     scanf("%ld %ld %ld",&x,&y,&z);
-      if (z <= x && z <= y) 
-      {
-       z=0;
-       printf("%ld + %ld = ",x,y);
-      } 
-      else if (y <= z && y <= x) 
-      {
-        y=0;
-        printf("%ld + %ld = ",z,x);
-      } 
-      else if (x <= y && x <= z)
-      { 
-        x=0;
-        printf("%ld + %ld = ",y,z);
-      }
-      sum = x+y+z;
-      printf("%ld",sum);
+    int n,i,j,k;
+    printf("enter number:");
+    scanf("%d", &n);
+    for(i=1;i<=n;i++)
+    {
+       for(j=1;j<= n-i;j++)
+       {
+       printf(" ");
+       }
+       for(k=1;k<=((2*i)-1);k++)
+       {
+        printf("*");
+       }
+       printf("\n");
+    }
     return 0;
 }

@@ -1,24 +1,41 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i,j,n;
-    printf("Enter number:");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    double BMI,w,h,x,y;
+    scanf("%lf %lf",&w,&x);
+    y=x/100;
+    h = pow(y,2);
+    BMI=w/h;
+    printf("BMI score is :%.2lf\n",BMI);
+    if(BMI < 0)
     {
-     for(j=1;j<=n;j++)
-     {
-         if(i==1 || j == 1 || i ==n || j == n)
-         {
-             printf("*");
-         }
-         else
-         {
-             printf(" ");
-         }
-         
-     }
-     printf("\n");
+        printf("Error");
     }
+    else if(BMI < 18.5)
+    {
+        printf("underweight");
+    }
+    else if(BMI >= 18.5 && BMI <= 24.99 )
+    {
+        printf("normal");
+    }
+    else if(BMI >= 25.0 && BMI <= 29.99 )
+    {
+        printf("overweight");
+    }
+    else if(BMI >= 30.0 && BMI <= 50.0 )
+    {
+        printf("too fat");
+    }
+    else if(BMI < 0)
+    {
+        printf("Error");
+    }
+    else
+    {
+        printf("Error");
+    }
+    
     return 0;
 }

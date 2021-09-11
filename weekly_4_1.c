@@ -1,22 +1,23 @@
 #include<stdio.h>
-long int main()
+int main()
 {
-    long int  num1,num2,num3,x,y,z;
-     scanf("%ld %ld %ld",&num1,&num2,&num3);
-    x=num1+num2;
-    y=num1+num3;
-	  z=num2+num3;
-      if (x >= y && x >= z) 
-      {
-        printf("%ld + %ld = %ld",num1,num2,x);
-      } 
-      else if (y >= x && y >= z) 
-      {
-        printf("%ld + %ld = %ld",num1,num3,y);
-      } 
-      else if (z >= y && z >= x)
-      { 
-        printf("%ld + %ld = %ld",num2,num3,z);
-      }
-    return 0;
+    int n;
+    printf("enter number:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+    for(int j=1;j<=2*n-1;j++)
+    {
+        if(j >= n-(i-1)&& j <= n+(i-1))
+        {
+            printf("*");
+        }
+        else 
+        {
+            printf(" ");
+        }
+    }
+
+    printf("\n");
+    }
 }
